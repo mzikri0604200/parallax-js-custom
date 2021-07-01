@@ -2,7 +2,6 @@ $color-green: #00ffaa;
 $color-background: #111;
 $color-text: #555;
 
-
 body {
   background: $color-background;
   color: $color-text;
@@ -16,7 +15,7 @@ img {
   width: 100%;
 }
 
-input[type=checkbox] {
+input[type='checkbox'] {
   display: none;
 }
 
@@ -27,7 +26,7 @@ label {
   padding: 0.4em 0;
 }
 
-input[type=checkbox] + label:before {
+input[type='checkbox'] + label:before {
   background: $color-text;
   content: '';
   display: inline-block;
@@ -38,7 +37,7 @@ input[type=checkbox] + label:before {
   width: 16px;
 }
 
-input[type=checkbox]:checked + label:before {
+input[type='checkbox']:checked + label:before {
   background: $color-green;
 }
 
@@ -77,7 +76,6 @@ button {
 }
 
 .scene {
-  margin: 0;
   padding: 0;
 
   button {
@@ -113,7 +111,22 @@ button {
     opacity: #{0.15 * $i};
 
     button {
-      transform: rotate(#{180 - 30 * $i}deg)
+      transform: rotate(#{180 - 30 * $i}deg);
     }
+  }
+}
+
+.menu {
+  display: flex;
+  padding: 0px 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+  .btn-nav {
+    text-decoration: none;
+    color: white;
+    background-color: #00ffaa;
+    padding: 8px 16px;
+    margin: 5px;
   }
 }
